@@ -18,7 +18,7 @@
 
     <body ng-app = "RPApp">
         <header ng-controller="MainController">
-            <div class="hmb-o" onclick="toggleSidebar()">
+            <div class="hmb-o" ng-click="toggleSidebar()">
                 <div class="hmb"></div>    
                 <div class="hmb"></div>    
             </div>
@@ -60,17 +60,7 @@
         <div class="container">
 			<div ui-view style="z-index:0"></div>
         </div>
-        <script>
-            function toggleSidebar() {
-                var element = document.getElementById("rp-sidenav");
-                if(element.style.width == "150px"){
-                    element.style.width = 0;
-                }else{
-                    element.style.width = "150px";
-                }
-            }
-             
-            </script>
+        
      </body>
 
 </html>
