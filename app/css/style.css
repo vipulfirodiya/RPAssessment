@@ -62,7 +62,7 @@ body {
             background-color: #fff; }
           body header .cart .cart-ill .table tr:hover {
             background-color: #ddd; }
-      body header .cart:hover .cart-ill {
+      body header .cart .img:hover + .cart-ill, body header .cart .cart-item:hover + .cart-ill {
         opacity: 1; }
   body .sidenav {
     width: 0;

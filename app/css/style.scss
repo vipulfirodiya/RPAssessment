@@ -110,7 +110,7 @@ body{
                     }
                 }
             }
-            &:hover .cart-ill{
+            .img:hover+.cart-ill, .cart-item:hover+.cart-ill{
                 opacity:1
             }
         }
