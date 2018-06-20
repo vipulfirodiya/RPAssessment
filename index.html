@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>RP Assessment</title>
+        <!-- <base href="/"/> -->
+        <meta name=description>
+        <meta name=viewport content="initial-scale=1, maximum-scale=1">
+        
+        <link rel="stylesheet" href="app/css/style.min.css" type="text/css">
+
+        <script src = "app/scripts/angular.min.js"></script>
+        <script src = "app/scripts/angular-ui-router.min.js"></script>
+        <script src = "app/scripts/app.min.js"></script>
+        <script src = "app/scripts/home-ctrl.min.js"></script>
+        <script src = "app/scripts/main-ctrl.min.js"></script>
+    </head>
+
+    <body ng-app = "RPApp">
+        <header ng-controller="MainController">
+            <div class="hmb-o" onclick="toggleSidebar()">
+                <div class="hmb"></div>    
+                <div class="hmb"></div>    
+            </div>
+            <div class="cart">
+                <div>
+                    <img src="app/images/cart.png" alt="">
+                </div>
+                <div class="cart-item">
+                    <span>{{cart.length}}</span>
+                </div>
+                <div class="cart-ill">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="c in cart">
+                                <td>{{c.name}}</td>
+                                <td>{{c.qty}}</td>
+                                <td>{{c.qty * c.price}}</td>
+                            </tr>
+                            <tr ng-if="cart.length == 0">
+                                <td class="no-data" colspan="3">Empty is Cart</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </header>
+        <div id="rp-sidenav" class="sidenav">
+            <div><a ui-sref="home" ui-sref-active="active">Home</a></div>
+            <div><a ui-sref="about" ui-sref-active="active">About Us</a></div>
+        </div>
+        <div class="container">
+			<div ui-view style="z-index:0"></div>
+        </div>
+        <script>
+            function toggleSidebar() {
+                var element = document.getElementById("rp-sidenav");
+                if(element.style.width == "150px"){
+                    element.style.width = 0;
+                }else{
+                    element.style.width = "150px";
+                }
+            }
+             
+            </script>
+     </body>
+
+</html>

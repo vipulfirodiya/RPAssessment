@@ -1,0 +1,216 @@
+body {
+  margin: unset; }
+  body header {
+    width: 100%;
+    background-color: #f2f2f2 !important;
+    position: fixed;
+    z-index: 9999999; }
+    body header .hmb-o {
+      padding: 10px 20px;
+      display: inline-block;
+      text-align: center; }
+      body header .hmb-o .hmb {
+        width: 40px;
+        height: 7px;
+        margin: 5px;
+        background: black; }
+    body header .cart {
+      padding: 10px;
+      float: right;
+      cursor: pointer; }
+      body header .cart div {
+        display: inline-block; }
+      body header .cart img {
+        width: 25px;
+        height: 25px; }
+      body header .cart .cart-item {
+        width: 25px;
+        height: 25px;
+        border: 2px solid #ffcb31;
+        border-radius: 50%;
+        vertical-align: top;
+        text-align: center;
+        color: #000;
+        background: #ffcb31;
+        font-weight: bold; }
+        body header .cart .cart-item span {
+          line-height: 1.5; }
+      body header .cart .cart-ill {
+        opacity: 0;
+        padding: 5px;
+        position: absolute;
+        right: 0;
+        transition: opacity 1s ease-out; }
+        body header .cart .cart-ill .table {
+          border-collapse: collapse;
+          width: 100%; }
+          body header .cart .cart-ill .table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white; }
+          body header .cart .cart-ill .table td, body header .cart .cart-ill .table th {
+            border: 1px solid #ddd;
+            padding: 8px; }
+          body header .cart .cart-ill .table tr .no-data {
+            text-align: center;
+            color: #ff0000; }
+          body header .cart .cart-ill .table tr:nth-child(even) {
+            background-color: #f2f2f2; }
+          body header .cart .cart-ill .table tr:nth-child(odd) {
+            background-color: #fff; }
+          body header .cart .cart-ill .table tr:hover {
+            background-color: #ddd; }
+      body header .cart:hover .cart-ill {
+        opacity: 1; }
+  body .sidenav {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 53px;
+    left: 0;
+    background-color: #b1d2ed;
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: 0.5s; }
+    body .sidenav div {
+      border-bottom: 1px solid #000; }
+      body .sidenav div a {
+        padding: 10px;
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+        cursor: pointer; }
+      body .sidenav div a:hover {
+        color: #f2f2f2; }
+    body .sidenav .active {
+      color: #f2f2f2; }
+  body .container {
+    padding: 53px 53px 0 53px; }
+    @media (max-width: 479px) {
+      body .container {
+        padding: 53px 20px 0 20px; } }
+    body .container section {
+      position: relative; }
+      body .container section .banner {
+        text-align: center; }
+        body .container section .banner img {
+          width: 80%;
+          height: 30%; }
+          @media (max-width: 479px) {
+            body .container section .banner img {
+              width: 100%;
+              height: 40%; } }
+      body .container section .spacer {
+        width: 100%;
+        height: 20px; }
+      body .container section .product-section {
+        text-align: center; }
+        body .container section .product-section h1, body .container section .product-section h3 {
+          font-family: bebasneue;
+          font-size: 3em;
+          letter-spacing: 1px;
+          margin-bottom: 0;
+          margin-top: 5px;
+          color: #005286;
+          text-transform: uppercase; }
+        body .container section .product-section small {
+          color: #005286; }
+        body .container section .product-section .product {
+          width: 284px;
+          height: auto;
+          display: inline-block;
+          padding: 10px;
+          margin: 10px;
+          text-align: center; }
+          @media (max-width: 479px) {
+            body .container section .product-section .product {
+              width: 225px;
+              height: auto; } }
+          body .container section .product-section .product .tags {
+            padding: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          body .container section .product-section .product .price strong {
+            color: #388e3c !important; }
+          body .container section .product-section .product button {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            font-weight: bolder; }
+          body .container section .product-section .product button:hover {
+            background: #ff9f00;
+            color: #fff; }
+        body .container section .product-section .product:hover {
+          box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.11);
+          color: #005286; }
+        body .container section .product-section .feature {
+          width: 180px;
+          height: 150px;
+          border-radius: 50%;
+          display: inline-block;
+          border: 2px solid #ffe60e;
+          padding-top: 42px; }
+          body .container section .product-section .feature img {
+            width: 100px;
+            height: 100px; }
+      body .container section modal-dialog {
+        width: 400px 60%;
+        height: 400px 60%; }
+      body .container section .ng-modal .ng-modal-overlay {
+        width: 108%;
+        height: 100%;
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+        left: -53px;
+        background-color: #928c8c;
+        opacity: 0.8; }
+        @media (max-width: 1299px) {
+          body .container section .ng-modal .ng-modal-overlay {
+            width: 112%;
+            height: 100%; } }
+        @media (max-width: 999px) {
+          body .container section .ng-modal .ng-modal-overlay {
+            width: 127%;
+            height: 100%; } }
+        @media (max-width: 479px) {
+          body .container section .ng-modal .ng-modal-overlay {
+            width: 176%;
+            height: 100%; } }
+      body .container section .ng-modal .ng-modal-dialog {
+        z-index: 10000;
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        background-color: #fff;
+        box-shadow: 4px 4px 12px #00000026; }
+        @media (max-width: 479px) {
+          body .container section .ng-modal .ng-modal-dialog {
+            width: 100%; } }
+        body .container section .ng-modal .ng-modal-dialog .ng-modal-dialog-content {
+          padding: 10px 10px;
+          text-align: center; }
+          body .container section .ng-modal .ng-modal-dialog .ng-modal-dialog-content h3 {
+            padding: 80px 10px !important; }
+        body .container section .ng-modal .ng-modal-dialog .ng-modal-close {
+          position: absolute;
+          top: 3px;
+          right: 5px;
+          padding: 5px;
+          cursor: pointer;
+          font-size: 120%;
+          display: inline-block;
+          font-weight: bold;
+          font-family: 'arial', 'sans-serif'; }
+
+/*# sourceMappingURL=style.css.map */

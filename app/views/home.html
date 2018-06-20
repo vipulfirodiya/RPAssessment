@@ -1,0 +1,20 @@
+<section>
+    <div class="banner">
+        <img src="app/images/banner_mini.jpg" alt="">
+    </div>
+    <div class="spacer"></div>
+    <div class="product-section">
+        <div class="product" ng-repeat="p in products">
+            <div>
+                <img src="{{p.src}}" alt="">
+            </div>
+            <div class="tags"><strong>{{p.name}}</strong></div>
+            <div class="tags price"><img src="app/images/inr.png" alt=""><strong>{{p.price}}</strong></div>
+            <div class="tags"><button ng-click="addToCart(p)">Add to Cart</button></div>
+        </div>
+    </div>
+    <modal-dialog show='modalShown'>
+        <h2>Alert</h2>
+        <h3>{{modalContent}}</h3>
+    </modal-dialog>
+</section>
